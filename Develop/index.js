@@ -3,13 +3,14 @@
 //const InputPrompt = require("inquirer/lib/prompts/input");
 const inquirer = require("inquirer");
 const fs = require("fs");
+const generateMarkdown = require("./utils/generateMarkdown");
 
 // TODO: Create an array of questions for user input
 const questions = [
   {
     type: "input",
     message: "What is the title of your repository?",
-    name: "repo",
+    name: "title",
   },
   {
     type: "input",
@@ -58,7 +59,7 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-  fs.writeFileSync("ReadMe.md", data, (err) =>
+  fs.writeFileSync(fileName, data, (err) =>
     err ? console.log(err) : console.log("Writing ReadMe!")
   );
   // writeFile("message.txt", "Hello Node.js", "utf8", callback);
@@ -72,6 +73,9 @@ function init() {
     .then((data) => {
       // Use user feedback for... whatever!!
       console.log(data);
+      console.log(generateMarkdown(data));
+      var rawMarkdown = generateMarkdown(data);
+      writeToFile("readme.md", rawMarkdown);
     })
     .catch((error) => {
       if (error.isTtyError) {
