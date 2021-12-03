@@ -47,6 +47,11 @@ const questions = [
   },
   {
     type: "input",
+    message: "Please add any additional notes or comments here.",
+    name: "comments",
+  },
+  {
+    type: "input",
     message: "Add your GitHub here.",
     name: "git",
   },
