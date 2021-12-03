@@ -15,7 +15,7 @@ const questions = [
   {
     type: "input",
     message: "Please add a project discription.",
-    name: "discription",
+    name: "description",
   },
   {
     type: "input",
@@ -62,17 +62,15 @@ function writeToFile(fileName, data) {
   fs.writeFileSync(fileName, data, (err) =>
     err ? console.log(err) : console.log("Writing ReadMe!")
   );
-  // writeFile("message.txt", "Hello Node.js", "utf8", callback);
 }
-console.log(writeToFile);
+// console.log(writeToFile);
 
 // TODO: Create a function to initialize app
 function init() {
   inquirer
     .prompt(questions)
     .then((data) => {
-      // Use user feedback for... whatever!!
-      console.log(data);
+      // console.log(data);
       console.log(generateMarkdown(data));
       var rawMarkdown = generateMarkdown(data);
       writeToFile("readme.md", rawMarkdown);
