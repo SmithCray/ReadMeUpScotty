@@ -1,16 +1,11 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// Licience
 function renderLicenseBadge(Mozzila) {}
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
 function renderLicenseLink(IBM) {}
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
 function renderLicenseSection(MIT) {}
 
-// TODO: Create a function to generate markdown for README
+// Generate markdown format for README
 function generateMarkdown(data) {
   return `# Title: ${data.title} 
   
@@ -47,10 +42,12 @@ function generateMarkdown(data) {
   #
   ${data.comments}
 
+  ## Please contact me with any further questions here:
   #
   ## Link me on GitHub - ${data.git}
   ## Or email me at - ${data.email}
   `;
 }
 
+// Generate export
 module.exports = generateMarkdown;

@@ -1,11 +1,9 @@
-// TODO: Include packages needed for this application
-
-//const InputPrompt = require("inquirer/lib/prompts/input");
+// Packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
 const generateMarkdown = require("./utils/generateMarkdown");
 
-// TODO: Create an array of questions for user input
+// Questions array for user input
 const questions = [
   {
     type: "input",
@@ -62,15 +60,14 @@ const questions = [
   },
 ];
 
-// TODO: Create a function to write README file
+// Function to write README file
 function writeToFile(fileName, data) {
   fs.writeFileSync(fileName, data, (err) =>
     err ? console.log(err) : console.log("Writing ReadMe!")
   );
 }
-// console.log(writeToFile);
 
-// TODO: Create a function to initialize app
+// Init fuction to call
 function init() {
   inquirer
     .prompt(questions)
@@ -88,11 +85,6 @@ function init() {
       }
     });
 }
-//complete the fs method on line 61
-//call the writeToFile function, where?
-//What can be passed in as arguments for fileName, and data?
-//How to use data from user's answers to write into the file?
-//readme: hint - use backtick/template literals to write the readme content before writing to file.
 
 // Function call to initialize app
 init();
