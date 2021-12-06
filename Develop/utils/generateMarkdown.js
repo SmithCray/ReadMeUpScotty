@@ -1,9 +1,8 @@
-// Licience
-function renderLicenseBadge(Mozzila) {}
+function renderLicenseBadge() {}
 
-function renderLicenseLink(IBM) {}
+function renderLicenseLink() {}
 
-function renderLicenseSection(MIT) {}
+function renderLicenseSection() {}
 
 // Generate markdown format for README
 function generateMarkdown(data) {
@@ -13,7 +12,7 @@ function generateMarkdown(data) {
   - Description
   - Insall
   - Usage 
-  - Licience
+  - Licence
   - Mentions
   - Tests
   - Contact Us
@@ -28,8 +27,8 @@ function generateMarkdown(data) {
   ## Additional usage information:
   ${data.usage}
 
-  ## Project licience 
-  ${data.licience}
+  ## Project licence 
+  ${data.licence}
 
   ## Contributions and Contributors:
   #
