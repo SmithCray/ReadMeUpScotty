@@ -31,7 +31,7 @@ Tired of writing readme's? This command line application will take your input an
 
 Generator preview:
 
-![Generator Preview](/assets\ReadMeUpScottyDemo.PNG)
+![Generator Preview](assets\ReadMeUpScottyDemo.PNG)
 
 ## Link to The Full Video Here:
 
